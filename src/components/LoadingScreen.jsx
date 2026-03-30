@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 export default function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
+  const [ready, setReady] = useState(false);
   const [fadingOut, setFadingOut] = useState(false);
 
   useEffect(() => {
@@ -15,22 +16,33 @@ export default function LoadingScreen({ onComplete }) {
       if (current >= 100) {
         current = 100;
         clearInterval(timer);
-        setFadingOut(true);
-        setTimeout(() => onComplete?.(), 800);
+        setReady(true);
       }
       setProgress(current);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [onComplete]);
+  }, []);
+
+  const handleEnter = useCallback(() => {
+    if (!ready || fadingOut) return;
+    setFadingOut(true);
+    setTimeout(() => onComplete?.(), 800);
+  }, [ready, fadingOut, onComplete]);
 
   return (
     <div className={`loading-screen ${fadingOut ? 'loading-fade-out' : ''}`}>
       <div className="loading-content">
         <h1 className="loading-logo">BAR <span>MASTER</span></h1>
-        <div className="loading-bar-track">
-          <div className="loading-bar-fill" style={{ width: `${progress}%` }} />
-        </div>
+        {!ready ? (
+          <div className="loading-bar-track">
+            <div className="loading-bar-fill" style={{ width: `${progress}%` }} />
+          </div>
+        ) : (
+          <button className="enter-btn" onClick={handleEnter}>
+            Enter
+          </button>
+        )}
       </div>
     </div>
   );
