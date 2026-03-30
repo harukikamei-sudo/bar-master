@@ -1,16 +1,37 @@
-# React + Vite
+# BAR MASTER
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+3Dバーカウンターで、AIマスターと会話しながらお酒を選べるWebアプリ。
 
-Currently, two official plugins are available:
+## 技術スタック
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite + React + Three.js (React Three Fiber / drei)
+- Tailwind CSS v4
+- フロントエンド完結（API不使用）
 
-## React Compiler
+## 機能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 3Dバーシーン（カメラ入場演出付き）
+- バーテンダーキャラクター（idle / bow / talk / thank アニメーション）
+- キーワードマッチ会話システム（30+パターン、選択肢ボタン＋自由テキスト入力）
+- お酒詳細パネル（レーダーチャート、3Dモデル自動回転表示）
+- 時間帯別挨拶 / 再訪検知（localStorage）
+- 常連割引（訪問5回以上で全品10%OFF）
+- 裏メニュー（訪問10回以上でロマネ・コンティ解放）
+- BGM・効果音（グラス音、ベル音）
+- ローディング画面 / ハンバーガーメニュー（法的ページ）
 
-## Expanding the ESLint configuration
+## お酒ラインナップ
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| 銘柄 | 種類 | 価格 |
+|------|------|------|
+| モエ・エ・シャンドン ロゼ | シャンパン | ¥2,800 |
+| 響 JAPANESE HARMONY | ウイスキー | ¥2,500 |
+| ヘネシー X.O | コニャック | ¥3,500 |
+| ロマネ・コンティ | ワイン（裏メニュー） | ¥7,000 |
+
+## セットアップ
+
+```bash
+npm install
+npm run dev
+```
