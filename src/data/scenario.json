@@ -1,0 +1,197 @@
+{
+  "steps": {
+    "welcome": {
+      "id": "welcome",
+      "animation": "greet",
+      "masterVariants": {
+        "morning": [
+          "こんにちは。昼から一杯、いいですね。\n今日はどんな気分ですか？"
+        ],
+        "evening": [
+          "お疲れさまです。今日も一日頑張りましたね。\n一杯いかがですか？"
+        ],
+        "night": [
+          "いらっしゃいませ。ようこそ、BAR MASTERへ。\n今宵はどんな気分でいらっしゃいますか？",
+          "こんばんは。何かお探しでしたら、お気軽にどうぞ。\n今日はどんな気分ですか？"
+        ],
+        "return": [
+          "おかえりなさい。またお会いできましたね。\n今日は何にしましょうか？",
+          "お久しぶりです。新しいのが入りましたよ。\n見ていかれますか？"
+        ]
+      },
+      "choices": [
+        { "label": "リラックスしたい", "tag": "relax", "next": "taste" },
+        { "label": "気分を上げたい", "tag": "uplift", "next": "taste" },
+        { "label": "じっくり味わいたい", "tag": "savor", "next": "taste" },
+        { "label": "おすすめを聞きたい", "tag": "any", "next": "osusume" },
+        { "label": "おまかせで", "tag": "any", "next": "type" }
+      ]
+    },
+    "osusume": {
+      "id": "osusume",
+      "animation": "talk",
+      "master": [
+        "かしこまりました。少しお聞きしてもいいですか？\n甘め・辛め・さっぱり、どのあたりがお好みですか？",
+        "お任せですね。普段はどんなお酒を飲まれますか？\nお好みに合わせてご提案しますよ。"
+      ],
+      "choices": [
+        { "label": "甘めが好き", "tag": "sweet", "next": "sweet_reply" },
+        { "label": "辛口・ドライ", "tag": "dry", "next": "dry_reply" },
+        { "label": "フルーティ", "tag": "fruity", "next": "fruity_reply" },
+        { "label": "苦味があるもの", "tag": "bitter", "next": "bitter_reply" },
+        { "label": "あまり飲めない", "tag": "light", "next": "light_reply" },
+        { "label": "全部おまかせ", "tag": "any", "next": "recommend" }
+      ]
+    },
+    "taste": {
+      "id": "taste",
+      "animation": "talk",
+      "master": [
+        "かしこまりました。\n甘め・辛め・さっぱり、どのあたりがお好みですか？",
+        "いいですね。\nお味の好みをお聞かせいただけますか？"
+      ],
+      "choices": [
+        { "label": "甘めが好き", "tag": "sweet", "next": "sweet_reply" },
+        { "label": "辛口・ドライ", "tag": "dry", "next": "dry_reply" },
+        { "label": "フルーティ", "tag": "fruity", "next": "fruity_reply" },
+        { "label": "苦味があるもの", "tag": "bitter", "next": "bitter_reply" },
+        { "label": "あまり飲めない", "tag": "light", "next": "light_reply" },
+        { "label": "おまかせ", "tag": "any", "next": "type" }
+      ]
+    },
+    "sweet_reply": {
+      "id": "sweet_reply",
+      "animation": "talk",
+      "master": [
+        "甘めですね。フルーティーで飲みやすいものがございますよ。\nちょっと見繕いますね。",
+        "甘口でしたら、ぴったりのがありますよ。\n少々お待ちください。"
+      ],
+      "autoNext": "recommend"
+    },
+    "dry_reply": {
+      "id": "dry_reply",
+      "animation": "talk",
+      "master": [
+        "キリッとしたのがお好きなんですね。\n後味がすっきりしたもの、お出ししましょう。",
+        "辛口ですね。通の方に人気のもの、ご用意しますよ。"
+      ],
+      "autoNext": "recommend"
+    },
+    "fruity_reply": {
+      "id": "fruity_reply",
+      "animation": "talk",
+      "master": [
+        "フルーティーですね。華やかな香りのもの、ございますよ。\nちょっとお待ちくださいね。",
+        "フルーティーでしたら、見た目もきれいなのがありますよ。\nお見せしますね。"
+      ],
+      "autoNext": "recommend"
+    },
+    "bitter_reply": {
+      "id": "bitter_reply",
+      "animation": "talk",
+      "master": [
+        "苦味がお好きとは、通でいらっしゃいますね。\n深みのある一杯、ご用意しましょう。",
+        "いい趣味されてますね。複雑な味わいのもの、お出ししますよ。"
+      ],
+      "autoNext": "recommend"
+    },
+    "light_reply": {
+      "id": "light_reply",
+      "animation": "talk",
+      "master": [
+        "軽めがお好みですね。無理せず楽しむのが一番です。\n飲みやすいもの、お見繕いしますね。",
+        "飲みやすいものでしたら、優しい口当たりのがございますよ。\nちょっとお待ちください。"
+      ],
+      "autoNext": "recommend"
+    },
+    "type": {
+      "id": "type",
+      "animation": "talk",
+      "master": [
+        "お任せですね。\n少しお聞きしてもいいですか？どのようなお酒の気分ですか？",
+        "かしこまりました。\nどのタイプがお好みですか？"
+      ],
+      "choices": [
+        { "label": "ウイスキー", "tag": "whiskey", "next": "recommend" },
+        { "label": "シャンパン", "tag": "champagne", "next": "recommend" },
+        { "label": "コニャック・ブランデー", "tag": "brandy", "next": "recommend" },
+        { "label": "なんでもいい", "tag": "any", "next": "recommend" }
+      ]
+    },
+    "recommend": {
+      "id": "recommend",
+      "animation": "bow",
+      "master": [
+        "それでしたら、こちらなんかいかがでしょう。\n自信を持っておすすめできる一杯です。",
+        "お待たせしました。こちら、今日のおすすめです。\nきっと気に入っていただけると思いますよ。"
+      ],
+      "action": "showDrink"
+    },
+    "afterRecommend": {
+      "id": "afterRecommend",
+      "animation": "talk",
+      "master": [
+        "いかがですか？\n気になりましたら、そのままお選びいただけますよ。",
+        "こちら、いかがでしょう？\nお試しでまず一杯いかがですか？"
+      ],
+      "choices": [
+        { "label": "これにする", "action": "addToList", "next": "added" },
+        { "label": "他のも見たい", "action": "nextDrink", "next": "recommend" },
+        { "label": "違うジャンルで", "next": "type" }
+      ]
+    },
+    "added": {
+      "id": "added",
+      "animation": "bow",
+      "master": [
+        "素晴らしいお選びです。\nもう一杯いかがですか？まだまだお付き合いしますよ。",
+        "いいチョイスですね。\n他にも気になるものがあれば、お気軽にどうぞ。"
+      ],
+      "choices": [
+        { "label": "もう一杯お願い", "next": "welcome" },
+        { "label": "ありがとう", "next": "thanked" },
+        { "label": "お会計で", "action": "checkout", "next": "checkout" }
+      ]
+    },
+    "thanked": {
+      "id": "thanked",
+      "animation": "thank",
+      "master": [
+        "とんでもないです。\nいい一杯に出会えたなら、こちらも嬉しいです。",
+        "こちらこそ、ありがとうございます。\nまだまだお付き合いしますよ。"
+      ],
+      "choices": [
+        { "label": "もう一杯お願い", "next": "welcome" },
+        { "label": "お会計で", "action": "checkout", "next": "checkout" }
+      ]
+    },
+    "checkout": {
+      "id": "checkout",
+      "animation": "bow",
+      "master": [
+        "ありがとうございました。\n今宵もいい夜を。またのお越しをお待ちしております。",
+        "ありがとうございました。\nお気をつけてお帰りくださいね。またいらしてください。"
+      ],
+      "action": "showResult"
+    }
+  },
+  "tagMapping": {
+    "mood": {
+      "リラックスしたい": "relax",
+      "気分を上げたい": "uplift",
+      "じっくり味わいたい": "savor"
+    },
+    "taste": {
+      "甘めが好き": "sweet",
+      "辛口・ドライ": "dry",
+      "フルーティ": "fruity",
+      "苦味があるもの": "bitter",
+      "あまり飲めない": "light"
+    },
+    "type": {
+      "ウイスキー": "whiskey",
+      "シャンパン": "champagne",
+      "コニャック・ブランデー": "brandy"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "moet-rose-imperial",
+    "name": "Moët & Chandon Rosé Impérial",
+    "nameJa": "モエ・エ・シャンドン ロゼ アンペリアル",
+    "type": "champagne",
+    "typeLabel": "シャンパン",
+    "description": "華やかなピンクの色合いに、ラズベリーやストロベリーのフレッシュなアロマ。繊細な泡立ちとエレガントな余韻が特別な夜にぴったりの一杯です。",
+    "flavor": {
+      "sweet": 3,
+      "bitter": 1,
+      "sour": 3,
+      "body": 2,
+      "aroma": 5
+    },
+    "strength": 12,
+    "price": "¥2,800",
+    "priceNum": 2800,
+    "origin": "フランス・シャンパーニュ地方",
+    "pairing": "いちごのタルト、生ハム、スモークサーモン",
+    "tags": {
+      "mood": ["uplift", "relax", "special"],
+      "taste": ["fruity", "sweet"],
+      "scene": ["celebration", "date", "special"]
+    },
+    "model": "/models/champagne_rose.glb",
+    "image": "/images/moet_rose.png",
+    "color": "#E8A0BF"
+  },
+  {
+    "id": "hibiki-harmony",
+    "name": "Hibiki Japanese Harmony",
+    "nameJa": "響 JAPANESE HARMONY",
+    "type": "whiskey",
+    "typeLabel": "ウイスキー",
+    "description": "日本の四季と自然が育んだブレンデッドウイスキー。ローズ、リッチなフルーツ、ほのかなミズナラの香り。口当たりは蜂蜜のようにまろやかで、余韻にサンダルウッドが漂います。",
+    "flavor": {
+      "sweet": 4,
+      "bitter": 2,
+      "sour": 1,
+      "body": 4,
+      "aroma": 5
+    },
+    "strength": 43,
+    "price": "¥2,500",
+    "priceNum": 2500,
+    "origin": "日本・サントリー",
+    "pairing": "ダークチョコレート、ナッツ、燻製チーズ",
+    "tags": {
+      "mood": ["relax", "savor"],
+      "taste": ["sweet", "fruity"],
+      "scene": ["alone", "special", "date"]
+    },
+    "model": "/models/whiskey_hibiki.glb",
+    "image": "/images/hibiki.png",
+    "color": "#D4A24E"
+  },
+  {
+    "id": "hennessy-xo",
+    "name": "Hennessy X.O",
+    "nameJa": "ヘネシー X.O",
+    "type": "brandy",
+    "typeLabel": "コニャック",
+    "description": "150年以上の歴史を持つ至高のコニャック。カカオ、シナモン、ドライフルーツの複雑なアロマが幾重にも重なり、長い余韻が続きます。一口ごとに新しい発見がある、まさに特別な一杯。",
+    "flavor": {
+      "sweet": 3,
+      "bitter": 3,
+      "sour": 1,
+      "body": 5,
+      "aroma": 5
+    },
+    "strength": 40,
+    "price": "¥3,500",
+    "priceNum": 3500,
+    "origin": "フランス・コニャック地方",
+    "pairing": "シガー、ビターチョコレート、フォアグラ",
+    "tags": {
+      "mood": ["savor", "relax"],
+      "taste": ["bitter", "sweet"],
+      "scene": ["alone", "special"]
+    },
+    "model": "/models/hennessy_xo.glb",
+    "image": "/images/hennessy_xo.png",
+    "color": "#8B4513"
+  },
+  {
+    "id": "romanee-conti",
+    "name": "Romanée-Conti",
+    "nameJa": "ロマネ・コンティ",
+    "type": "wine",
+    "typeLabel": "裏メニュー",
+    "description": "ブルゴーニュの神が宿る畑から生まれる、世界最高峰のピノ・ノワール。バラ、スパイス、トリュフが織りなす圧倒的なアロマ。一生に一度は味わいたい、伝説の一杯。",
+    "flavor": {
+      "sweet": 3,
+      "bitter": 2,
+      "sour": 2,
+      "body": 5,
+      "aroma": 5
+    },
+    "strength": 13,
+    "price": "¥7,000",
+    "priceNum": 7000,
+    "originalPrice": "¥10,000",
+    "originalPriceNum": 10000,
+    "origin": "フランス・ブルゴーニュ地方 ヴォーヌ・ロマネ村",
+    "pairing": "トリュフ、フォアグラ、熟成チーズ、和牛ステーキ",
+    "tags": {
+      "mood": ["savor", "special"],
+      "taste": ["fruity", "bitter"],
+      "scene": ["special", "celebration", "date"]
+    },
+    "model": "/models/romanee_conti.glb",
+    "image": null,
+    "color": "#722F37",
+    "secret": true
+  }
+]
